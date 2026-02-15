@@ -1,8 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Students Using This Instructions
+After this repo is either cloned or downloaded
+First Step, install dependencies
+
+```bash
+npm install
+
+
 ## Getting Started
 
-First, run the development server:
+Second Step, run the development server:
 
 ```bash
 npm run dev
