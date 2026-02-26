@@ -1,7 +1,8 @@
 'use client';
 import React from "react";
+import { UserProps } from "@/types/types";
 
-const User: React.FC<{ userName: string; userType: string }> = ({ userName, userType }) => {
+const User: React.FC<UserProps> = ({ userName, userType }) => {
   return (
     <div>
       <h3> {userName} </h3>
