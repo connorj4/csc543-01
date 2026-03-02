@@ -5,6 +5,8 @@ import Footer from "@/layout/footer";
 import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/layout/theme';
+import { Suspense } from 'react';
+import Loading from './loading';
 import "./globals.css";
 
 const roboto = Roboto({
@@ -29,9 +31,11 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
-          <Header />
-          {children}
-          <Footer />
+           <Header /> 
+          <Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
+          <Footer /> 
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

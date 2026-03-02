@@ -3,15 +3,14 @@
 
 import { format } from 'date-and-time';
 
-format(new Date(), 'ddd, MMM DD YYYY'); // Wed, Jul 09 2025
+const dateFormat =format(new Date(), 'ddd, MMM DD YYYY HH:mm:ss'); // Wed, Jul 09 2025
 
 const DateUtils = {
   formatDate: (date: Date, formatStr: string): string => {
     return format(date, formatStr);
   },
   nowDate: (): string => {
-    const now = new Date();
-    return format(now, 'ddd, MMM DD YYYY');
+    return dateFormat;
   }
 };
 
