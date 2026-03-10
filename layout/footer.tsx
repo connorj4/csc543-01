@@ -20,7 +20,7 @@ const Footer:React.FC = () => {
     <footer className="w-full bg-zinc-800 flex justify-center px-8 align-bottom ">
       <div className="bg-green-300 p-4 rounded-md">
         <p className="text-sm text-gray-600">
-          &copy; {time ? time.toLocaleDateString() : '—'} {/**time.toLocaleTimeString() **/} Task App. All rights reserved.
+          &copy; {time ? time.toLocaleDateString() : '—'} {time ? time.toLocaleTimeString() : '—'} Task App. All rights reserved.
         </p>  
       </div>
       </footer>

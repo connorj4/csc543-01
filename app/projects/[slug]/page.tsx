@@ -3,6 +3,7 @@
 // Define the types for the parameters
 type TodoSampleProps = {
   params: {
+    slug: number;
     userId: number;
     id: number;
     title: string;
