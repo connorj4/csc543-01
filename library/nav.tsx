@@ -3,6 +3,7 @@ import {
     FaDiceD6,
     FaClipboardCheck,
     FaHouse,
+    FaBatteryEmpty
   } from "react-icons/fa6";
 
 export const NAV_ITEMS: NavItem[] = [
@@ -20,5 +21,10 @@ export const NAV_ITEMS: NavItem[] = [
         title: "Projects",
         path: "/projects",
         icon: <FaClipboardCheck className="text-2xl" />,
+    },
+    {
+        title: "Contact",
+        path: "/contact",
+        icon: <FaBatteryEmpty className="text-2xl" />,
     },
 ]

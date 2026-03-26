@@ -15,7 +15,7 @@ const ProjectPage: React.FC<TodoSampleProps> = async ({
   params,
 }: TodoSampleProps) => {
   
-  const { slug } = await params; // Extract the id from the params by destructuring
+  const { slug } = params; // Extract the id from the params by destructuring
   console.log('Params: ', params);
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/todos/${slug}`,

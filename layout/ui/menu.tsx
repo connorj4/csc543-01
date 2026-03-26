@@ -132,6 +132,7 @@ const ResponsiveAppBar: React.FC = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
+                {item.icon}
                 {item.title}
               </Button>
             ))}
