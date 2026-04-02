@@ -54,12 +54,12 @@ interface PrevState {
     isError: boolean;
 }
 
-const HandleSubmit = (prevState: PrevState, formData: FormData) => {
-    const type = formData.get('type');
+const HandleSubmit = async(prevState: PrevState, formData: FormData) => {
+    const type = await formData.get('type');
     // remove the type from the form data
     formData.delete('type');
     // sanitize the form data
-    const formDataEntries = sanitizeFormData(formData);
+    const formDataEntries = await sanitizeFormData(formData);
     async function handler(formDataEntries: Record<string, string | boolean | string[] | undefined>) {
         // create a request Init object
         const reqInit: RequestInit = {
