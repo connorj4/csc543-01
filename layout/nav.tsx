@@ -1,3 +1,4 @@
+/* FILE TO BE DELETED */
 "use client";
 import React from "react";
 import Link from 'next/link';

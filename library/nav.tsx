@@ -5,6 +5,7 @@ import {
     FaHouse,
     FaBatteryEmpty
   } from "react-icons/fa6";
+  import { DiMongodb } from "react-icons/di";
 
 export const NAV_ITEMS: NavItem[] = [
     {
@@ -21,6 +22,11 @@ export const NAV_ITEMS: NavItem[] = [
         title: "Projects",
         path: "/projects",
         icon: <FaClipboardCheck className="text-2xl" />,
+    },
+    {
+        title: "ProjectsDB",
+        path: "/proDB",
+        icon: <DiMongodb className="text-2xl" />,
     },
     {
         title: "Contact",

@@ -21,7 +21,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const ResponsiveAppBar: React.FC = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-  const [activePath, setActivePath] = React.useState<string>("");
+  const [activePath, setActivePath] = React.useState<null | string>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -38,8 +38,7 @@ const ResponsiveAppBar: React.FC = () => {
     setAnchorElUser(null);
   };
 
-  const pathname = usePathname();
-
+const pathname = usePathname();
   React.useEffect(() => {
     setActivePath(pathname);
   }, [pathname]);

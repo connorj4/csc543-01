@@ -19,7 +19,7 @@ const Home: React.FC = () => {
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-        <p>Conetent is loading...</p>
+        <p>Content is loading...</p>
         
       </div>
     );

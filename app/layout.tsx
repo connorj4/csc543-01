@@ -1,19 +1,14 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import type { Metadata } from "next";
-import Header from "@/layout/header";
-import Footer from "@/layout/footer";
-import { Roboto } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '@/layout/theme';
-import { Suspense } from 'react';
-import Loading from './loading';
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Providers from "@/layout/providers";
 
 const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto',
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -30,13 +25,7 @@ export default function RootLayout({
     <html lang="en-US" className={roboto.variable} suppressHydrationWarning>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-           <Header /> 
-          <Suspense fallback={<Loading />}>
-            {children}
-          </Suspense>
-          <Footer /> 
-          </ThemeProvider>
+          <Providers>{children}</Providers>
         </AppRouterCacheProvider>
       </body>
     </html>
