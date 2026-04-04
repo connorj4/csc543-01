@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion"; // Importing AnimatePresence and motion components from Framer Motion for animation effects
 /* * SlideUp component for motion effects.
  * @returns JSX Element
  * @param children - React nodes to be rendered inside the component
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const SlideUp: React.FC<Props> = ({ children, isAnimating }) => {
-  console.log("SlideUp component", isAnimating ? "is animating" : "not animating");
+  console.log("SlideUp component", isAnimating ? "is animating" : "not animating"); // Logging the animation state for debugging purposes
   return (
     <AnimatePresence>
         {isAnimating && (

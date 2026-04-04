@@ -6,7 +6,12 @@ import Typography from '@mui/material/Typography';
 import { MdOutlineArrowCircleUp } from "react-icons/md";
 import { MdOutlineArrowCircleDown } from "react-icons/md";
 import React from 'react';
-
+/* * AccordionUI component renders a simple accordion interface using Material-UI components.
+ * It includes two accordion items, each with a summary and details section.
+ * The expand icons are provided by react-icons, showing an up or down arrow depending on the state of the accordion.
+ * The content of the details section is placeholder text (Lorem ipsum) for demonstration purposes.
+ * This component can be used in various parts of the application where an accordion UI is needed to display collapsible content.
+ */ 
 const AccordionUI: React.FC = () => {
   return (
         <div>

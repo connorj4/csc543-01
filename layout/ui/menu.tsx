@@ -14,7 +14,12 @@ import { MdAdb as AdbIcon, MdMenu as MenuIcon } from "react-icons/md";
 import { NAV_ITEMS } from "@/library/nav";
 import { usePathname } from 'next/navigation';
 
-
+/* * ResponsiveAppBar component renders a responsive navigation bar using Material-UI components.
+ * It includes a logo, navigation links, and a user menu with settings options.
+ * The navigation links are generated from the NAV_ITEMS array, and the active link is highlighted based on the current pathname.
+ * The user menu is triggered by clicking on the avatar icon and includes options like Profile, Account, Dashboard, and Logout.
+ * This component is designed to be used at the top of the application to provide easy navigation and access to user settings.
+ */
 // const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 

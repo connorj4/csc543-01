@@ -1,12 +1,20 @@
 @layer theme, base, mui, components, utilities;
 @import "tailwindcss";
+/*
+  * This is the global CSS file for the application, which defines the base styles and theme variables.
+  * It sets up CSS variables for background and foreground colors, and applies them to the body element.
+  * The file also includes media queries to support dark mode based on the user's system preferences.
+  * Additionally, it defines font families for sans-serif and monospace fonts using CSS variables.
+  */
 
 :root {
+  /* Define CSS variables for background and foreground colors, which can be used throughout the application to maintain consistent theming. The default values are set for light mode. */
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
+  /* Define additional CSS variables for colors and fonts that reference the base variables defined in the :root selector. This allows for easier theming and customization of the application's appearance. */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -15,12 +23,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Override the CSS variables for background and foreground colors when the user's system is set to dark mode. This ensures that the application adapts its appearance to match the user's preferences for a better user experience. */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
 body {
+  /* Apply the background and foreground colors defined in the CSS variables to the body element, ensuring that the entire application inherits these styles. Additionally, set a default font family for the application using a common sans-serif font stack. */
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;

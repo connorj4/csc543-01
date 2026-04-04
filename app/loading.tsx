@@ -1,13 +1,17 @@
-'use client'; 
-import React from "react";  
+"use client";
+import React from "react";
 import SkeletonUI from "@/layout/ui/skeleton";
-
-export default function Loading() {
+/*
+ * This is the Loading component, which serves as a placeholder UI while data is being fetched or loaded in the application.
+ * It utilizes the SkeletonUI component to display a skeleton screen, providing a visual indication to users that content is loading.
+ * The component is designed to be simple and reusable across different parts of the application where loading states are needed.
+ */ 
+const Loading = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <SkeletonUI loading={true} />
-      </main>
-    </div>
+    <>
+      <SkeletonUI loading={true} />
+    </>
   );
 }
+
+export default Loading;

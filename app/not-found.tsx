@@ -1,5 +1,9 @@
 import React from "react";
-
+/*
+ * This is the NotFound component, which serves as a custom 404 error page for the application.
+ * It displays a message indicating that the requested page was not found and provides a user-friendly interface for users who may have navigated to a non-existent route.
+ * The component is styled using Tailwind CSS classes to ensure a consistent look and feel with the rest of the application.
+ */
 export default function NotFound() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">

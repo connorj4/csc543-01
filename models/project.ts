@@ -1,7 +1,14 @@
 import mongoose, { Schema, InferSchemaType } from "mongoose";
 import { DataTypes } from "@/types/types";
 import slugify from 'slugify';
-// move this to types...
+/**
+ *  Project model definition using Mongoose, which represents a project entity in the MongoDB database. The schema defines the structure of the project documents, including fields such as type, title, description, slug, completed status, and active status. The schema also includes validation rules for each field, such as required fields, minimum and maximum lengths, and unique constraints. Additionally, a pre-save hook is implemented to automatically generate a slug from the title and to ensure that the completed and active fields are properly set based on their values before saving the document to the database. The model is exported for use in other parts of the application to perform CRUD operations on project data.
+ * @module models/project
+ * @requires mongoose
+ * @requires slugify
+ * @exports Project - The Mongoose model for the Project schema, which can be used to interact with the projects collection in the MongoDB database.
+ * @exports ProjectModelType - The TypeScript type definition for the Project model, which can be used for type checking and ensuring type safety when working with project data in the application.    
+ */
 interface IProjectSchema {
     _id: mongoose.Types.ObjectId,
     type: string;

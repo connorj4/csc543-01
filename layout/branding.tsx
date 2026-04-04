@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
-
-
+/* * Branding component renders an SVG logo for the application.
+ * The logo consists of a rounded rectangle background with a gradient fill, a circular element in the center, and a checkmark-like shape.
+ * The SVG uses linear gradients for the background and accent colors, and it includes stroke properties for the circular element to create a dynamic visual effect.
+ * This component can be used in various parts of the application where branding or logo representation is needed, such as in the header or landing page.
+ */
 const Branding: React.FC = () => {
   return (
     <svg
